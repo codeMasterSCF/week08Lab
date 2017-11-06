@@ -3,8 +3,8 @@ package servlets;
 import businesslogic.NoteService;
 import domainmodel.Note;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -41,11 +41,11 @@ public class NoteServlet extends HttpServlet {
             }
         }
         
-        ArrayList<Note> notes = null;        
+        List<Note> notes = null;        
         
         try {
             
-            notes = (ArrayList<Note>) ns.getAll();
+            notes = ns.getAll();
             
         } catch (Exception ex) {
             
@@ -93,11 +93,11 @@ public class NoteServlet extends HttpServlet {
         
         }
         
-        ArrayList<Note> notes = null;
+        List<Note> notes = null;
         
         try {
             
-            notes = (ArrayList<Note>) ns.getAll();
+            notes = ns.getAll();
             
         } catch (Exception ex) {
             

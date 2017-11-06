@@ -47,70 +47,110 @@ public class Note implements Serializable {
     }
 
     public Note(Integer noteId) {
+        
         this.noteId = noteId;
+        
     }
 
     public Note(Integer noteId, Date dateCreated, String contents) {
+        
         this.noteId = noteId;
         this.dateCreated = dateCreated;
         this.contents = contents;
+        
     }
 
-    public Note(int parseInt, String contents) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Note(int noteId, String contents) {
+        
+        this.noteId = noteId;
+        this.dateCreated = new Date();
+        this.contents = contents;
+        
     }
 
     public Note(String contents) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   
+        this.dateCreated = new Date();
+        this.contents = contents;
+        
     }
 
     public Integer getNoteId() {
+        
         return noteId;
+        
     }
 
     public void setNoteId(Integer noteId) {
+        
         this.noteId = noteId;
+        
     }
 
     public Date getDateCreated() {
+        
         return dateCreated;
+        
     }
 
     public void setDateCreated(Date dateCreated) {
+        
         this.dateCreated = dateCreated;
+        
     }
 
     public String getContents() {
+        
         return contents;
+        
     }
 
     public void setContents(String contents) {
+        
         this.contents = contents;
+        
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
+        
         int hash = 0;
         hash += (noteId != null ? noteId.hashCode() : 0);
         return hash;
+        
     }
 
     @Override
     public boolean equals(Object object) {
+        
         // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Note)) {
+            
             return false;
+            
         }
+        
         Note other = (Note) object;
+        
         if ((this.noteId == null && other.noteId != null) || (this.noteId != null && !this.noteId.equals(other.noteId))) {
+            
             return false;
+            
         }
+        
         return true;
+        
     }
 
     @Override
     public String toString() {
+        
         return "domainmodel.Note[ noteId=" + noteId + " ]";
+        
     }
     
 }

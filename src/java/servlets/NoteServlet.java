@@ -87,6 +87,7 @@ public class NoteServlet extends HttpServlet {
                 ns.insert(contents);
                 
             }
+            
         } catch (Exception ex) {
             
             request.setAttribute("errorMessage", "Could not perform action.");

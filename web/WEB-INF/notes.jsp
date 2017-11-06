@@ -52,7 +52,7 @@
             <form action="notes" method="POST">
                 Contents: <input type="text" name="contents"><br><br>
                 <input type="hidden" name="action" value="add">
-                <input type="submit" value="Add">
+                <input type="submit" value="Save">
             </form>
         </c:if>
         <c:if test="${selectedNote != null}">
